@@ -1,0 +1,15 @@
+schema {
+    query: QueryType
+}
+
+type QueryType {
+    todos: [Todo]
+    todoByName(name: String): Todo
+    completedTodos: [Todo]
+}
+
+type Todo {
+    name: String
+    description: String
+    completed: Boolean
+}
